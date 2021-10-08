@@ -1,5 +1,8 @@
 <template>
-  <Content />
+  <div>
+    <NavBar />
+    <Content />
+  </div>
 </template>
 
 <script>
