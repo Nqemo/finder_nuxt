@@ -16,4 +16,10 @@ export const mutations = {}
 
 export const actions = {}
 
-export const getters = {}
+export const getters = {
+  // get images
+  getImages: (state) => state.images,
+
+  // get tags
+  getTagToSearch: (state) => state.tagToSearch,
+}
