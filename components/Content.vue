@@ -10,7 +10,7 @@
       sm:items-center sm:pt-0
     "
   >
-    <div class="flex-w justify-between">
+    <div class="flex flex-wrap m-1 justify-between">
       <ImgCard
         v-for="(imag, index) in images"
         :key="index"

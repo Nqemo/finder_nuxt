@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg">
+  <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg max-w-1/3">
     <img
       :src="url"
       :alt="name"
