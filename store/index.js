@@ -8,6 +8,9 @@ export const state = () => ({
 })
 
 export const mutations = {
+  CLEAN_IMAGES(state) {
+    state.images = []
+  },
   ADD_IMAGE(state, payload) {
     state.images.push(payload)
   },
@@ -18,6 +21,7 @@ export const mutations = {
 
 export const actions = {
   setImages({ commit }, payload) {
+    commit('CLEAN_IMAGES')
     payload.items.forEach((element) => {
       commit('ADD_IMAGE', element)
     })

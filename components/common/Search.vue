@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import GetImg from '../../plugins/flickrapi'
+
 export default {
   data() {
     return {
@@ -35,8 +37,12 @@ export default {
     }
   },
   methods: {
-    searchTag() {
-      this.$emit('gettag', { tag: this.tag })
+    async searchTag() {
+      const imag = await GetImg(this.tag)
+      this.$store
+        .dispatch('setImages', imag)
+        .then(() => console.log('OK'))
+        .catch((error) => console.log('Problem setImages ', error))
     },
   },
 }
