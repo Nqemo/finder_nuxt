@@ -16,7 +16,6 @@
     "@nuxtjs/proxy": "^2.1.0",
     "core-js": "^3.15.1",
     "fetch-jsonp": "^1.2.1",
-    "jquery": "^3.6.0",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
