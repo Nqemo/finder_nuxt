@@ -9,7 +9,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     maxWidth: {
-      '1/3': '32%',
+      '1/3': '30%',
     },
     extend: {},
   },

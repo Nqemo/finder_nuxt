@@ -37,4 +37,7 @@ export const getters = {
 
   // get tags
   getTagToSearch: (state) => state.tagToSearch,
+
+  // get isLoading
+  isLoading: (state) => state.isLoading,
 }

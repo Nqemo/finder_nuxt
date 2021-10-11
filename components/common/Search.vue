@@ -38,11 +38,14 @@ export default {
   },
   methods: {
     async searchTag() {
+      // active isLoading
+      this.$store.dispatch('toggle_loading')
       const imag = await GetImg(this.tag)
       this.$store
         .dispatch('setImages', imag)
         .then(() => console.log('OK'))
         .catch((error) => console.log('Problem setImages ', error))
+        .finally(() => this.$store.dispatch('toggle_loading'))
     },
   },
 }
