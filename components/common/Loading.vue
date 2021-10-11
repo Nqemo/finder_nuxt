@@ -44,6 +44,7 @@ import { mapGetters } from 'vuex'
 export default {
   computed: {
     ...mapGetters({
+      // get state of var
       active: ['isLoading'],
     }),
   },

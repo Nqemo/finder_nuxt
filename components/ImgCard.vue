@@ -5,7 +5,7 @@
       :alt="name"
       class="sm:rounded-t-xl h-60 w-full object-cover"
     />
-    <h2 class="text-2xl leading-7 font-semibold p-6">
+    <h2 class="text-base leading-7 font-semibold p-6">
       {{ name }}
     </h2>
   </div>

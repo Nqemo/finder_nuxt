@@ -11,6 +11,7 @@
     "
   >
     <div class="flex flex-wrap m-1 justify-between">
+      <!-- loop imgcar -->
       <ImgCard
         v-for="(imag, index) in images"
         :key="index"
@@ -27,6 +28,7 @@ import { mapGetters } from 'vuex'
 export default {
   computed: {
     ...mapGetters({
+      // get images of store
       images: ['getImages'],
     }),
   },
