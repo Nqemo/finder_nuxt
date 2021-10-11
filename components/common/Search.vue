@@ -6,6 +6,7 @@
         type="text"
         placeholder="type tag to search..."
         class="py-2 px-1 rounded-md mr-4"
+        @keyup.enter="searchTag"
       />
       <button
         type="submit"
@@ -38,13 +39,15 @@ export default {
   },
   methods: {
     async searchTag() {
-      // active isLoading
+      // activate isLoading
       this.$store.dispatch('toggle_loading')
+      // ask for the images and wait
       const imag = await GetImg(this.tag)
+      // update store
       this.$store
         .dispatch('setImages', imag)
-        .then(() => console.log('OK'))
         .catch((error) => console.log('Problem setImages ', error))
+        // deactivate isLoading
         .finally(() => this.$store.dispatch('toggle_loading'))
     },
   },
