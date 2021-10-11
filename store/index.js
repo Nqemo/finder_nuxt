@@ -4,20 +4,26 @@ export const state = () => ({
 
   // tags
   tagToSearch: '',
+  isLoading: false,
 })
 
 export const mutations = {
   ADD_IMAGE(state, payload) {
     state.images.push(payload)
   },
-  SET_IMAGES(state, payload) {
-    state.images = payload
+  TOGGLE_LOADING(state) {
+    state.isLoading = !state.isLoading
   },
 }
 
 export const actions = {
   setImages({ commit }, payload) {
-    commit('SET_IMAGES', payload)
+    payload.items.forEach((element) => {
+      commit('ADD_IMAGE', element)
+    })
+  },
+  toggle_loading({ commit }) {
+    commit('TOGGLE_LOADING')
   },
 }
 
