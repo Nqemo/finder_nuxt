@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import GetImg from '../../plugins/flickrapi'
-
 export default {
   data() {
     return {
@@ -38,14 +36,13 @@ export default {
     }
   },
   methods: {
-    async searchTag() {
+    searchTag() {
       // activate isLoading
       this.$store.dispatch('toggle_loading')
-      // ask for the images and wait
-      const imag = await GetImg(this.tag)
+
       // update store
       this.$store
-        .dispatch('setImages', imag)
+        .dispatch('setImages', this.tag)
         .catch((error) => console.log('Problem setImages ', error))
         // deactivate isLoading
         .finally(() => this.$store.dispatch('toggle_loading'))

@@ -1,3 +1,5 @@
+import GetImg from '../plugins/flickrapi'
+
 export const state = () => ({
   // images
   images: [],
@@ -20,9 +22,11 @@ export const mutations = {
 }
 
 export const actions = {
-  setImages({ commit }, payload) {
+  async setImages({ commit }, tag) {
+    // ask for the images and wait
+    const imag = await GetImg(tag)
     commit('CLEAN_IMAGES')
-    payload.items.forEach((element) => {
+    imag.items.forEach((element) => {
       commit('ADD_IMAGE', element)
     })
   },
