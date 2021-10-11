@@ -21,6 +21,39 @@ $ yarn install
 $ yarn dev
 ```
 
+## Despliegue 📦
+
+Crear un archivo .env en el raiz del proyecto
+
+Añadir al archivo .env los siguientes parametros:
+
+```
+VUE_APP_TITLE=Flickr-Search
+VUE_APP_API=https://www.flickr.com/services/feeds/photos_public.gne
+```
+
+y con esto
+
+**`Ya estaría desplegado el proyecto`**
+<br/>
+<br/>
+
+## Construido con 🛠️
+
+- [Vue](https://vuejs.org) - El framework JS
+- [Nuxt](https://nuxt.org) - El framework del framework
+- [TailwindCSS](https://tailwindcss.com) - El framework CSS
+
+## Autor ✒️
+
+- **Nacho Quero** - [NqEmO](https://github.com/Nqemo)
+
+## Licencia 📄
+
+_privada_
+
+[Nacho](https://github.com/Nqemo) 😊
+
 ## Notas
 
 Se hace uso de **Fetch-jsonp**, y no de un **fetch** o **axios** clásico, para evitar los problemas CORS que genera la feeds pública de Flickr.
